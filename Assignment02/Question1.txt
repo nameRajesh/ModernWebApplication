@@ -1,0 +1,37 @@
+
+
+1) Explain why do we sometimes want to use setImmediate instead of setTimeout?
+
+setTimeout is simply like calling the function after delay has finished. Whenever a function is called it is not executed immediately, 
+but queued so that it is executed after all the executing and currently queued eventhandlers finish first. setTimeout(,0) essentially 
+means execute after all current functions in the present queue get executed. No guarantees can be made about how long it could take.
+
+setImmediate is similar in this regard except that it doesn't use queue of functions. It checks queue of I/O eventhandlers. If all I/O 
+events in the current snapshot are processed, it executes the callback. It queues them immedieately after the last I/O handler somewhat 
+like process.nextTick. So it is faster.
+
+
+2) Explain the difference between process.nextTick and setImmediate?
+
+When process.nextTick is used, all the callbacks are processed in the nextTick queue after the current operation completes and before the 
+event loop continues, and that means it runs before any additional I/O events or timers fire.
+
+Whereas, setImmediate when used, doesn't use queue of functions. It checks queue of I/O eventhandlers. If all I/O events in the current 
+snapshot are processed, it executes the callback.
+
+So in a case where you're trying to break up a long running, CPU-bound job using recursion, you would now want to use setImmediate rather 
+than process.nextTick to queue the next iteration as otherwise any I/O event callbacks wouldn't get the chance to run between iterations.
+
+
+3) Name 10 global modules available in Node Environment.
+
+1.	module
+2.	global 
+3.	process
+4.	buffer
+5.	Math
+6.	Number
+7.	root
+8.	setTimeout
+9.	setInterval
+10.	util
