@@ -8,8 +8,8 @@ const item = {
  	"price" : 2.0
 }
 
-const applyCoupon = category => disount => item => {
-    item.price =  item.price - (item.price*disount);
+const applyCoupon = category => discount => item => {
+    item.price =  item.price - (item.price*discount);
     return item;
 }
 

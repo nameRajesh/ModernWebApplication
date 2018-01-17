@@ -1,10 +1,8 @@
-
-
 class Musician{
 		constructor(name){
       		this.name = name;}
 	play(piece){
-  		console.log(this.name +' is now palying '+ piece )
+  		console.log(this.name +' is now playing '+ piece )
 		}
 }
 
