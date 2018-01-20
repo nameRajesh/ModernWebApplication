@@ -1,0 +1,14 @@
+{
+  "name": "question2",
+  "version": "1.0.0",
+  "description": "checkSystem",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Rajesh Subedi",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.5.6"
+  }
+}

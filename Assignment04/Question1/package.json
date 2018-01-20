@@ -1,0 +1,15 @@
+{
+  "name": "question01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node app.js"
+  },
+  "author": "Rajesh Subedi",
+  "license": "ISC",
+  "dependencies": {
+    "rx": "^4.1.0"
+  }
+}
