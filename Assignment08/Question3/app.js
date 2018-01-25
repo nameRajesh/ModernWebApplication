@@ -53,8 +53,8 @@ db.connect('mongodb://localhost:27017/location', function(err) {
     	console.log('Unable to connect to MongoDB...')
     	process.exit(1)
   	} else {
-    	app.listen(8080, function() {
-      		console.log('Listening on port 8080...')
+    	app.listen(8000, function() {
+      		console.log('Listening on port 8000...')
     	})
   	}
 });
