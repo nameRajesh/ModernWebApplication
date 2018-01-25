@@ -1,0 +1,24 @@
+
+//Book
+
+   {
+	_id: objectId(),
+	isbn_number: '',
+	name: '',
+	author: '',
+	keywords: ['',' ',...]
+   }
+
+//Student
+  {
+	_id: ,
+	name:'',
+	books: 	[ {book_id: Book(isbn_number) , return_date: ''},
+		  {book_id: Book(isbn_number) , return_date: ''}, ...]
+   }
+
+
+//indexes
+{'author': 1, 'keywords': 1}
+{'author': 1, 'name': 1}
+{'isbn_number': 1, 'name': 1}
