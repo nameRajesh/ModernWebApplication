@@ -11,7 +11,7 @@
 
 //Student
   {
-	_id: ,
+	_id: "student_id",
 	name:'',
 	books: 	[ {book_id: Book(isbn_number) , return_date: ''},
 		  {book_id: Book(isbn_number) , return_date: ''}, ...]
@@ -22,3 +22,5 @@
 {'author': 1, 'keywords': 1}
 {'author': 1, 'name': 1}
 {'isbn_number': 1, 'name': 1}
+//student
+{'_id':1,'books':1}
