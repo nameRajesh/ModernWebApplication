@@ -5,5 +5,5 @@ class Person {
 }
 
 var p = new Person();
-p.firstName = "Prabhab";
+p.firstName = "Rajesh";
 console.log(p.firstName);
