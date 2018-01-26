@@ -62,7 +62,7 @@ router.post('/', checkOp, function(req, res, next) {
 				collection.insert(loc, (err, doc) => {
 					if(err) throw err;
 					doc.message = "added successfully";
-					res.status(200).json(loc);
+					res.status(200).json(doc);
 				})
 				
 			});
@@ -192,7 +192,7 @@ router.post('/search', checkSearch, function(req, res, next) {
 			var query = {$and : [{ location:{ $geoWithin:
                 { $centerSphere: [ [ loc.longitude, loc.latitude ], 5 / 3963.2 ] } } }, {'category': loc.category}]}
             collection.find(query).limit(10).toArray(function(err, docs) {
-                res.send(docs);
+				res.send(docs);
             });
 
 	  	}

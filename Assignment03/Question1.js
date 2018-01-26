@@ -1,7 +1,10 @@
 
-var http = require('http');
 
-http.createServer(function(req,res) {
-    res.writeHead(200,{'Content-Type':'text\plan'});
-    res.end('hello world');
-}).listen(8000);
+const dns = require("dns");
+
+let url = "www.mum.edu";
+
+dns.resolve4(url, (err, addresses) => {
+  	if (err) throw err;
+ 	console.log(`Ip address for ${url}: ${addresses}`);
+});
