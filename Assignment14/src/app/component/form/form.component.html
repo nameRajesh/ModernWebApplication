@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="username">Name</label>
+              <br/>
+              <input type="text"
+                    class="form-control"
+                    id="username"
+                    formControlName="username">
+              <div class="err" *ngIf="!form.controls['username'].valid">
+                  Required
+                </div>
+
+            </div>
+          
+            <div class="form-group">
+              <label for="email">Email</label>
+              <br/>
+              <input type="text"
+                      class="form-control"
+                      id="email"
+                      formControlName="email">
+          
+              <div class="err" *ngIf="!form.controls['email'].valid">
+                Required
+              </div>
+            </div>
+          
+            <div class="form-group">
+              <label for="post">Post</label>
+              <br/>
+              <textarea
+                     class="form-control"
+                     id="post"
+                     formControlName="post">
+              </textarea>
+          
+              <div class="err" *ngIf="!form.controls['post'].valid">
+                Minimum Length 10
+              </div>
+            </div>
+          
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+            <button type="button" class="btn btn-primary" (click) = getData()>Get Data</button>
+          
+          </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+        {{userInfo | json}}
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col">
+          {{userPost | json}}
+      </div>
+    </div>
+</div>
