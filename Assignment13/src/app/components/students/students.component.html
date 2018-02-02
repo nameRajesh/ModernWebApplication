@@ -1,0 +1,5 @@
+<div class="col-xs-10">
+  <ul>
+    <li *ngFor="let user of users"><a [routerLink]="['profile', user._id]" >{{user.name}}</a></li>
+  </ul>
+</div>
